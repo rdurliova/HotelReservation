@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectHotelsReservation.Views
+namespace HotelManagmentSystem_v0.Views
 {
     public class MenuConsole
     {
