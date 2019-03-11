@@ -61,6 +61,9 @@
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\Town.cs" />
     <Compile Include="Models\Type.cs" />
+    <Compile Include="Views\InOutConsole.cs" />
+    <Compile Include="Views\MenuConsole.cs" />
+    <Compile Include="Views\MessageApp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
