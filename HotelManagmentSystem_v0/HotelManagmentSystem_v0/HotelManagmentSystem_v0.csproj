@@ -87,6 +87,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FormAddNewRoom.resx">
+      <DependentUpon>FormAddNewRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormInsertCoutriesAndTowns.resx">
       <DependentUpon>FormInsertCoutriesAndTowns.cs</DependentUpon>
     </EmbeddedResource>

@@ -40,5 +40,10 @@ namespace HotelManagmentSystem_v0.Controlers
                 .FirstOrDefault(t => t.Type1 == roomType);
             return findType;
         }
+        public List<Type> AllTypes()
+        {
+           return context.Types.ToList();
+           
+        }
     }
 }
