@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelManagmentSystem_v0
 {
-    class Program
+    class Startup
     {
         static void Main(string[] args)
         {
