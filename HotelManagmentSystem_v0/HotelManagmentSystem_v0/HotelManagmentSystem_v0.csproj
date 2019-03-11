@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlers\ConsoleControler.cs" />
+    <Compile Include="Controlers\Find.cs" />
+    <Compile Include="Controlers\InsertControler.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\HotelBase.cs" />
