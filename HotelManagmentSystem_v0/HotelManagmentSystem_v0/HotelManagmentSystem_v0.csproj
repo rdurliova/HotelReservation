@@ -41,8 +41,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +56,12 @@
     <Compile Include="Controlers\ConsoleControler.cs" />
     <Compile Include="Controlers\Find.cs" />
     <Compile Include="Controlers\InsertControler.cs" />
+    <Compile Include="Forms\FormAddNewRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddNewRoom.Designer.cs">
+      <DependentUpon>FormAddNewRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\HotelBase.cs" />
