@@ -16,5 +16,13 @@ namespace Project.Views
             Console.Write("Избери команда: ");
             return Console.ReadLine();
         }
+        public string MenuRead()
+        {
+            Console.WriteLine("1 - Списък с държави");
+            Console.WriteLine("2 - ");
+            Console.WriteLine("3 - ");
+            Console.Write("Избери команда: ");
+            return Console.ReadLine();
+        }
     }
 }

@@ -10,17 +10,20 @@ namespace Project.Controlers
 {
     public class ConsoleControler
     {
+        private static HotelReservationContext context = new HotelReservationContext();
+
         public static InsertControler insert = new InsertControler();
         public static InOutConsole inOut = new InOutConsole();
         public static MessageApp message = new MessageApp();
         public static MenuConsole menu = new MenuConsole();
+        public static ReadControler read = new ReadControler(context);
 
         public ConsoleControler()
         {
-            Start();
+            Read();
         }
 
-        public void Start()
+        public void Add()
         {
             while (true)
             {
@@ -39,6 +42,32 @@ namespace Project.Controlers
                         //  break;
                 }
             }
+        }
+        public void Read()
+        {
+            while (true)
+            {
+                switch (menu.MenuRead())
+                {
+                    case "1":
+                        ReadCountry();
+                        break;
+                    case "2":
+                        InsertIntoTowns();
+                        return;
+                        break;
+                    case "3":
+                        return;
+                        break;
+                    default: return;
+                        //  break;
+                }
+            }
+        }
+
+        private void ReadCountry()
+        {
+            inOut.PrintCountryInfo(read.CounrtiesList());
         }
 
         public void InsertIntoCoutries()

@@ -34,5 +34,14 @@ namespace Project.Views
         {
             Console.WriteLine(message);
         }
+
+        public void PrintCountryInfo(List<Country> countries)
+        {
+            Console.WriteLine($"{"ID",-5}{"Country name,-15"}");
+            foreach (var c in countries)
+            {
+                Console.WriteLine($"{c.Id,-4} {c.Name,-15}");
+            }
+        }
     }
 }
