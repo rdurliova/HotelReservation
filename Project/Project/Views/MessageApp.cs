@@ -9,6 +9,7 @@ namespace Project.Views
     public class MessageApp
     {
         public const string EnterCorrectValues = "Въведи коректни стойности!";
+        public const string ObjectNotFound = "Няма намерени резултати!";
         public string MessageInsertCoutryTrue(string countryName)
         {
             string message = $"{countryName} е добавена успешно в таблцита с държави!";
