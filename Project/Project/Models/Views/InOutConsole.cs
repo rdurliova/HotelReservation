@@ -42,6 +42,7 @@ namespace Project.Views
             {
                 Console.WriteLine($"{c.Id,-4} {c.Name,-15}");
             }
+        
         }
     }
 }

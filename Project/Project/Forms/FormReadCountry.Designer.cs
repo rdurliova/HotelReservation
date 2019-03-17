@@ -46,18 +46,19 @@
             this.label1.Location = new System.Drawing.Point(44, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.Size = new System.Drawing.Size(32, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Име ";
+            this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(44, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 25);
+            this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ID";
+            this.label2.Text = "Име";
             // 
             // label3
             // 

@@ -20,5 +20,18 @@ namespace Project.Controlers
             List<Country> returnCountries = context.Countries.ToList();
             return returnCountries;
         }
-    }
+        public List<Town> TownsList()
+        {
+            List<Town> returnTowns = context.Towns.ToList();
+            return returnTowns;
+        }
+
+        }
 }
+
+
+     
+       
+   
+
+

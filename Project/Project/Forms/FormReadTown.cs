@@ -12,54 +12,57 @@ using System.Windows.Forms;
 
 namespace Project.Forms
 {
-    public partial class FormReadCountry : Form
+    public partial class FormReadTown : Form
     {
         private static HotelReservationContext context = new HotelReservationContext();
         private static ReadControler read = new ReadControler(context);
         private static Find find = new Find();
         int count = 0;
+        List<Town> towns = read.TownsList();
         List<Country> countries = read.CounrtiesList();
-        public FormReadCountry()
+
+        public FormReadTown()
         {
             InitializeComponent();
-           
         }
 
-        private void FormReadCountry_Load(object sender, EventArgs e)
+        private void FormReadTown_Load(object sender, EventArgs e)
         {
             button3.Enabled = false;
             textBox1.Enabled = false;
-            label3.Text = countries.First().Id.ToString();
-            label4.Text = countries.First().Name;
+            label3.Text = towns.First().Id.ToString();
+            label4.Text = towns.First().Name;
+            label8.Text = towns[count].Country.Name;
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             count--;
-            if (count<0)
+            if (count < 0)
             {
-                count = countries.Count-1;
+                count = towns.Count - 1;
             }
-            label3.Text = countries[count].Id.ToString();
-            label4.Text = countries[count].Name;
-            
+            label3.Text = towns[count].Id.ToString();
+            label4.Text = towns[count].Name;
+            label8.Text = towns[count].Country.Name;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             count++;
-            if (count >= countries.Count)
+            if (count >= towns.Count)
             {
                 count = 0;
             }
-            label3.Text = countries[count].Id.ToString();
-            label4.Text = countries[count].Name;
-            
+            label3.Text = towns[count].Id.ToString();
+            label4.Text = towns[count].Name;
+            label8.Text = towns[count].Country.Name;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            
             if (checkBox1.Checked == true)
             {
                 button3.Enabled = true;
@@ -75,16 +78,17 @@ namespace Project.Forms
                 button3.Enabled = false;
                 textBox1.Enabled = false;
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Country findCountry = find.FindCountry(textBox1.Text);
-            if (findCountry!=null)
+            Town findTown = find.FindTown(textBox1.Text,textBox2.Text);
+            if (findTown != null)
             {
                 count = 0;
-                label3.Text = findCountry.Id.ToString();
-                label4.Text =findCountry.Name;
+                label3.Text = findTown.Id.ToString();
+                label4.Text = findTown.Name;
             }
             else
             {
@@ -93,9 +97,6 @@ namespace Project.Forms
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

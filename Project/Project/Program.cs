@@ -14,7 +14,7 @@ namespace Project
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
-            Application.Run(new FormReadCountry());
+            Application.Run(new FormReadTown());
 
           //  ConsoleControler controler = new ConsoleControler();
         }

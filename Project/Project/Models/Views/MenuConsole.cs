@@ -24,5 +24,6 @@ namespace Project.Views
             Console.Write("Избери команда: ");
             return Console.ReadLine();
         }
+        
     }
 }
