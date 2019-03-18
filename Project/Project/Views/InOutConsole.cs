@@ -34,7 +34,11 @@ namespace Project.Views
             Console.Write("Въведи име: ");
             return Console.ReadLine();
         }
-
+        public string ReadLastName()
+        {
+            Console.Write("Въведи фамилия: ");
+            return Console.ReadLine();
+        }
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);
