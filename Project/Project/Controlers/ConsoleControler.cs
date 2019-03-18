@@ -116,9 +116,23 @@ namespace Project.Controlers
         }
         public void InsertIntoClients()
         {
+            string fName = inOut.ReadFirstName();
+            string lName = inOut.ReadLastName();
+            int age = inOut.ReadAge();
+            string gsm = inOut.ReadGsm();
+            string egn = inOut.ReadEGN();
+            string email = inOut.ReadEmail();
             string townName = inOut.ReadTownName();
             string countryName = inOut.ReadCoutryName();
-            bool isAdd = insert.InsertIntoClients();
+            bool isAdd = insert.InsertIntoClients(fName,lName, egn,age,townName,countryName,gsm,email);
+            if (isAdd == true)
+            {
+                inOut.PrintMessage(MessageApp.ClientIsAdd);
+            }
+            else
+            {
+                message.MessageInsertRoomFalse(MessageApp.EnterCorrectValues);
+            }
         }
     }
 }

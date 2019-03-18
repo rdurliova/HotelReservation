@@ -44,10 +44,10 @@ namespace Project.Views
             Console.Write("Въведи ЕГН: ");
             return Console.ReadLine();
         }
-        public string ReadAge()
+        public int ReadAge()
         {
             Console.Write("Въведи възраст: ");
-            return Console.ReadLine();
+            return int.Parse(Console.ReadLine());
         }
         public string ReadGsm()
         {
