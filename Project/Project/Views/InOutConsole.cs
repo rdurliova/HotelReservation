@@ -73,6 +73,42 @@ namespace Project.Views
             }
         
         }
-        
+        public string ReadIdClient()
+        {
+            Console.Write("Въведи номер на клиент: ");
+            return Console.ReadLine();
+        }
+        public string ReadIdRoom()
+        {
+            Console.Write("Въведи тип на стая: ");
+            return Console.ReadLine();
+
+        }
+        public string ReadStartDate()
+        {
+            Console.Write("Въведи начална дата: ");
+            return Console.ReadLine();
+        }
+        public string ReadFinishDate()
+        {
+            Console.Write("въведи крайна дата: ");
+            return Console.ReadLine();
+
+        }
+        public string ReadPayment()
+        {
+            Console.Write("Въведи сума: ")
+                return Console.ReadLine(); 
+      
+        }
+        public string ReadPaymentType()
+        {
+            Console.Write("Въведи начин на плащане: ");
+            return Console.ReadLine();
+
+        }
+    
+  
+
     }
 }
