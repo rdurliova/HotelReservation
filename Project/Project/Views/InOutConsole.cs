@@ -29,6 +29,11 @@ namespace Project.Views
             Console.Write("Въведи номер на стая: ");
             return Console.ReadLine();
         }
+        public string ReadFirstName()
+        {
+            Console.Write("Въведи име: ");
+            return Console.ReadLine();
+        }
 
         public void PrintMessage(string message)
         {
@@ -44,5 +49,6 @@ namespace Project.Views
             }
         
         }
+        
     }
 }
