@@ -38,6 +38,9 @@ namespace Project.Controlers
                     case "3":
                         InsertIntoRooms();
                         break;
+                    case "4":
+                        InsertIntoClients();
+                        break;
                     default: return;
                         //  break;
                 }

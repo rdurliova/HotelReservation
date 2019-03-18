@@ -13,6 +13,7 @@ namespace Project.Views
             Console.WriteLine("1 - Добави държава");
             Console.WriteLine("2 - Добави град");
             Console.WriteLine("3 - Добави стая");
+            Console.WriteLine("3 - Добави клиент");
             Console.Write("Избери команда: ");
             return Console.ReadLine();
         }
