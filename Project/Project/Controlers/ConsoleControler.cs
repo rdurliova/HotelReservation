@@ -114,5 +114,11 @@ namespace Project.Controlers
                 message.MessageInsertRoomFalse(type);
             }
         }
+        public void InsertIntoClients()
+        {
+            string townName = inOut.ReadTownName();
+            string countryName = inOut.ReadCoutryName();
+            bool isAdd = insert.InsertIntoClients();
+        }
     }
 }
