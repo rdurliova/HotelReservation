@@ -30,6 +30,15 @@ namespace Project.Controlers
                 return find;
             }
         }
+        public Client GetClientByEGN(string egn)
+        {
+          return  context.Clients.FirstOrDefault(c => c.EGN == egn);
+        }
+        public Room GetRoomByNumber(string roomNumber)
+        {
+            return context.Rooms.FirstOrDefault(r => r.RoomNumebr==roomNumber);
+        }
+
 
         public RoomType FindType(string roomType)
         {

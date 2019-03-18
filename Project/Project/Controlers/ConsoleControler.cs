@@ -137,10 +137,7 @@ namespace Project.Controlers
                 inOut.PrintMessage(MessageApp.EnterCorrectValues);
             }
         }
-        public bool InsertIntoReservation()
-        {
-            string 
-        }
+
 
 
     }

@@ -84,5 +84,11 @@ namespace Project.Controlers
                 return false;
             }
         }
+        public bool InsertIntoReservation(string egn,string roomNumber)
+        {
+            Client client = find.GetClientByEGN(egn);
+
+            Reservation newReservation = new Reservation(client.Id);
+        }
     }
 }

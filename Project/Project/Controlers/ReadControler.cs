@@ -25,7 +25,7 @@ namespace Project.Controlers
             List<Town> returnTowns = context.Towns.ToList();
             return returnTowns;
         }
-        
+     
 
         }
 }
