@@ -39,6 +39,11 @@ namespace Project.Views
             Console.Write("Въведи фамилия: ");
             return Console.ReadLine();
         }
+        public string ReadEGN()
+        {
+            Console.Write("Въведи ЕГН: ");
+            return Console.ReadLine();
+        }
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);
