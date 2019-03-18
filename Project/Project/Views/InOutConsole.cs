@@ -49,6 +49,11 @@ namespace Project.Views
             Console.Write("Въведи възраст: ");
             return Console.ReadLine();
         }
+        public string ReadGsm()
+        {
+            Console.Write("Въведи тел.номер: ");
+            return Console.ReadLine();
+        }
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);
