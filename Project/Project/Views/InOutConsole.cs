@@ -54,6 +54,11 @@ namespace Project.Views
             Console.Write("Въведи тел.номер: ");
             return Console.ReadLine();
         }
+        public string ReadEmail()
+        {
+            Console.Write("Въведи имейл адрес: ");
+            return Console.ReadLine();
+        }
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);
