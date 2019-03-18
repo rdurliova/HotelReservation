@@ -73,42 +73,52 @@ namespace Project.Views
             }
         
         }
-        public string ReadIdClient()
+        public string ReadEgnClient()
         {
-            Console.Write("Въведи номер на клиент: ");
+            Console.Write("Въведи ЕГН на клиент: ");
             return Console.ReadLine();
         }
-        public string ReadIdRoom()
+        
+        public string ReadNumberRoom()
         {
-            Console.Write("Въведи тип на стая: ");
-            return Console.ReadLine();
-
-        }
-        public string ReadStartDate()
-        {
-            Console.Write("Въведи начална дата: ");
-            return Console.ReadLine();
-        }
-        public string ReadFinishDate()
-        {
-            Console.Write("въведи крайна дата: ");
+            Console.Write("Въведи номер на стая: ");
             return Console.ReadLine();
 
         }
-        public string ReadPayment()
+        public decimal ReadPayment()
         {
-            Console.Write("Въведи сума: ")
-                return Console.ReadLine(); 
+            Console.Write("Въведи сума: ");
+                return decimal.Parse( Console.ReadLine()); 
       
         }
         public string ReadPaymentType()
         {
             Console.Write("Въведи начин на плащане: ");
             return Console.ReadLine();
-
         }
-    
-  
+
+        public DateTime ReadStartDate()
+        {
+            Console.Write("Въведи начална дата във формат 'ден-месец-година':");
+            int[] info = Console.ReadLine().Split('-').Select(int.Parse).ToArray();
+            int year = info[2];
+            int month = info[1];
+            int day = info[0];
+            DateTime startDate = new DateTime(year, month, day);
+            return startDate;
+        }
+        public DateTime ReadEndDate()
+        {
+            Console.Write("Въведи крайна дата във формат 'ден-месец-година':");
+            int[] info = Console.ReadLine().Split('-').Select(int.Parse).ToArray();
+            int year = info[2];
+            int month = info[1];
+            int day = info[0];
+            DateTime startDate = new DateTime(year, month, day);
+            return startDate;
+        }
+
+
 
     }
 }

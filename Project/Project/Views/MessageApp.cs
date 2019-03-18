@@ -47,6 +47,23 @@ namespace Project.Views
             string message = $"{roomType} - не съществува!";
             return message;
         }
+        public string MessageInsertReservationTrue()
+        {
+            string message= " Резервацията е направена";
+            return message;
+
+        }
+        public string MessageInsertReservationFalse()
+        {
+            string message = "Резервацията е неуспешна";
+            return message;
+        }
+        
+
+   
+        
+
+  
 
     }
 }

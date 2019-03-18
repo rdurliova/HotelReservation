@@ -137,6 +137,28 @@ namespace Project.Controlers
                 inOut.PrintMessage(MessageApp.EnterCorrectValues);
             }
         }
+        public void InsertIntoReservation()
+        {
+            string egnClient = inOut.ReadEgnClient();
+            string roomNumber = inOut.ReadRoomNumber();
+            DateTime startDate = inOut.ReadStartDate();
+            DateTime finishDate = inOut.ReadEndDate();
+            decimal pay = inOut.ReadPayment();
+            string payType = inOut.ReadPaymentType();
+
+            bool isAdd = insert.InsertIntoReservation(egnClient, roomNumber, startDate, finishDate, pay, payType);
+            if (isAdd)
+            {
+                inOut.PrintMessage(message.MessageInsertReservationTrue());
+
+                    
+            }
+            else
+            {
+                inOut.PrintMessage(message.MessageInsertReservationFalse());
+            }
+
+        }
 
 
 

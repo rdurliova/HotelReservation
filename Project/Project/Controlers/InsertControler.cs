@@ -84,11 +84,23 @@ namespace Project.Controlers
                 return false;
             }
         }
-        public bool InsertIntoReservation(string egn,string roomNumber)
+        public bool InsertIntoReservation(string egn,string roomNumber,DateTime startDate, DateTime endDate,decimal pay,string paymentType)
         {
             Client client = find.GetClientByEGN(egn);
-
-            Reservation newReservation = new Reservation(client.Id);
+            Room room = find.GetRoomByNumber(roomNumber);
+            if (client!=null && room!=null && endDate>startDate)
+            {
+                Reservation newReservation = new Reservation(client.Id, room.Id, startDate, endDate, pay, paymentType);
+                context.Reservations.Add(newReservation);
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
+
     }
 }
