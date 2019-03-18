@@ -44,6 +44,11 @@ namespace Project.Views
             Console.Write("Въведи ЕГН: ");
             return Console.ReadLine();
         }
+        public string ReadAge()
+        {
+            Console.Write("Въведи възраст: ");
+            return Console.ReadLine();
+        }
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);
