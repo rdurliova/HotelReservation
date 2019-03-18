@@ -14,6 +14,7 @@ namespace Project.Views
             Console.WriteLine("2 - Добави град");
             Console.WriteLine("3 - Добави стая");
             Console.WriteLine("4 - Добави клиент");
+            Console.WriteLine("5 - Резервация");
             Console.Write("Избери команда: ");
             return Console.ReadLine();
         }

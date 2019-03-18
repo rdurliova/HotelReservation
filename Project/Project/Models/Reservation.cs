@@ -24,7 +24,7 @@ namespace Project
             this.DataStart = startDate;
             this.DataFinish = finishDate;
             this.Payment = payment;
-            this.PaymentType = PaymentType;
+            this.PaymentType = paymentType;
           
         }
 

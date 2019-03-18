@@ -41,6 +41,9 @@ namespace Project.Controlers
                     case "4":
                         InsertIntoClients();
                         break;
+                    case "5":
+                        InsertIntoReservation();
+                        break;
                     default: return;
                         //  break;
                 }
