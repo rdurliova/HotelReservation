@@ -20,7 +20,7 @@ namespace Project.Controlers
 
         public ConsoleControler()
         {
-            Read();
+            Add();
         }
 
         public void Add()
@@ -114,7 +114,7 @@ namespace Project.Controlers
             }
             else
             {
-                message.MessageInsertRoomFalse(type);
+               inOut.PrintMessage( message.MessageInsertRoomFalse(type));
             }
         }
         public void InsertIntoClients()
@@ -134,7 +134,7 @@ namespace Project.Controlers
             }
             else
             {
-                message.MessageInsertRoomFalse(MessageApp.EnterCorrectValues);
+                inOut.PrintMessage(MessageApp.EnterCorrectValues);
             }
         }
     }

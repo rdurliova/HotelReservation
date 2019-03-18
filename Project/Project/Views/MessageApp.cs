@@ -10,6 +10,7 @@ namespace Project.Views
     {
         public const string EnterCorrectValues = "Въведи коректни стойности!";
         public const string ObjectNotFound = "Няма намерени резултати!";
+        public const string ClientIsAdd = "Клиентът е добавен!";
         public string MessageInsertCoutryTrue(string countryName)
         {
             string message = $"{countryName} е добавена успешно в таблцита с държави!";
