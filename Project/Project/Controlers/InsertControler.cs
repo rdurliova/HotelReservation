@@ -67,6 +67,22 @@ namespace Project.Controlers
                 return false;
 
             }
+            
+        }
+        public bool InsertIntoClients(string firstName, string lastName, string egn, int age, string townName, string countryName, string gsm, string email)
+        {
+            var town = find.FindTown(countryName, townName);
+            if (town!=null)
+            {
+                Client newClient = new Client(firstName, lastName, egn, age, town.Id, gsm, email);
+                context.Clients.Add(newClient);
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
