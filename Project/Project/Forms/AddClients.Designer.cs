@@ -167,6 +167,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(145, 97);
+            this.textBox3.MaxLength = 10;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(108, 26);
             this.textBox3.TabIndex = 12;
@@ -178,6 +179,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(79, 28);
             this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 

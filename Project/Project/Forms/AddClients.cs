@@ -45,21 +45,41 @@ namespace Project.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            bool isAdd = insert.InsertIntoClients(textBox1.Text,textBox2.Text,textBox3.Text,int.Parse(comboBox3.Text),comboBox1.Text,comboBox2.Text,textBox4.Text,textBox5.Text);
-            if (isAdd)
+            if (textBox1.TextLength>3 &&textBox2.TextLength>3)
             {
-                MessageBox.Show(message.MessageInsertClientsTrue());
+                if (textBox3.TextLength == 10)
+                {
+                    bool isAdd = insert.InsertIntoClients(textBox1.Text, textBox2.Text, textBox3.Text, int.Parse(comboBox3.Text), comboBox1.Text, comboBox2.Text, textBox4.Text, textBox5.Text);
+                    if (isAdd)
+                    {
+                        MessageBox.Show(message.MessageInsertClientsTrue());
+                    }
+                    else
+                    {
+                        MessageBox.Show(MessageApp.EnterCorrectValues);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(MessageApp.EnterCorrectValues + " Провери ЕГН!");
+                }
             }
             else
             {
-                MessageBox.Show(MessageApp.EnterCorrectValues);
+                MessageBox.Show(MessageApp.EnterCorrectValues + " Провери име и фамилия!");
             }
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox2.Text = context.Towns.FirstOrDefault(x => x.Name == comboBox1.Text).Country.Name;
         }
     }
 }

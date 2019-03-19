@@ -14,6 +14,7 @@ namespace Project.Forms
 {
     public partial class FormReservation : Form
     {
+        HotelReservationContext context = new HotelReservationContext();
         public FormReservation()
         {
             InitializeComponent();
@@ -31,7 +32,16 @@ namespace Project.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var client =context.Clients.FirstOrDefault(c=>c.EGN==textBox1.Text);
+            if (client!=null)
+            {
 
+            }
+            else
+            {
+                AddClients settingsForm = new AddClients();
+                settingsForm.Show();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
