@@ -58,12 +58,22 @@ namespace Project.Views
             string message = "Резервацията е неуспешна";
             return message;
         }
-        
 
-   
-        
+        public string MessageInsertClientsTrue()
+        {
+            string message = " Клиентът е добавен успешно!";
+            return message;
 
-  
+        }
+        public string MessageInsertClientsFalse()
+        {
+            string message = "Клиентът не е добавен!";
+            return message;
+        }
+
+
+
+
 
     }
 }

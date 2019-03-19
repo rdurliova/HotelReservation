@@ -58,6 +58,12 @@
     <Compile Include="Controlers\Find.cs" />
     <Compile Include="Controlers\InsertControler.cs" />
     <Compile Include="Controlers\ReadControler.cs" />
+    <Compile Include="Forms\AddClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddClients.Designer.cs">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AddClients.resx">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddRoom.resx">
       <DependentUpon>FormAddRoom.cs</DependentUpon>
     </EmbeddedResource>
