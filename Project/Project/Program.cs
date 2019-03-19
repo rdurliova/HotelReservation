@@ -13,10 +13,10 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            //Application.EnableVisualStyles();
-            //Application.Run(new FormReadTown());
+            Application.EnableVisualStyles();
+            Application.Run(new AddClients());
 
-          ConsoleControler controler = new ConsoleControler();
+          //ConsoleControler controler = new ConsoleControler();
         }
     }
 }

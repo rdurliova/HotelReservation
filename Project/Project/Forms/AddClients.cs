@@ -21,7 +21,22 @@ namespace Project.Forms
         public AddClients()
         {
             InitializeComponent();
+            List<Town> towns = read.TownsList();
+            List<Country> countries = read.CounrtiesList();
+            foreach (var t in towns)
+            {
+                comboBox1.Items.Add(t.Name);
+            }
+            foreach (var c in countries)
+            {
+                comboBox2.Items.Add(c.Name);
+            }
+            for (int i = 16; i < 120; i++)
+            {
+                comboBox3.Items.Add(i);
+            }
         }
+
 
         private void AddClients_Load(object sender, EventArgs e)
         {
@@ -36,7 +51,7 @@ namespace Project.Forms
         private void button1_Click(object sender, EventArgs e)
         {
 
-            bool isAdd = insert.InsertIntoClients(textBox1.Text,textBox2.Text,textBox3.Text,int.Parse(comboBox1.Text),comboBox2.Text,comboBox3.Text,textBox4.Text,textBox5.Text);
+            bool isAdd = insert.InsertIntoClients(textBox1.Text,textBox2.Text,textBox3.Text,int.Parse(comboBox3.Text),comboBox1.Text,comboBox2.Text,textBox4.Text,textBox5.Text);
             if (isAdd)
             {
                 MessageBox.Show(message.MessageInsertClientsTrue());
