@@ -21,10 +21,7 @@ namespace Project.Forms
         {
             InitializeComponent();
             LoadFreeRooms();
-            for (int i = 5; i < ; i++)
-            {
 
-            }
             
         }
 

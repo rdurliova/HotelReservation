@@ -77,6 +77,10 @@ namespace Project
                 .IsUnicode(false);
 
             modelBuilder.Entity<RoomType>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<RoomType>()
                 .HasMany(e => e.Rooms)
                 .WithRequired(e => e.RoomType)
                 .HasForeignKey(e => e.TypeId)

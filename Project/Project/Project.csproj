@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8ED6F108-DEFD-4384-8FEE-A14BEC983E89}</ProjectGuid>
+    <ProjectGuid>{4A56C21A-7B8C-4CF8-B27C-3158EE14B3C9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Project</RootNamespace>
     <AssemblyName>Project</AssemblyName>
@@ -93,6 +93,12 @@
     </Compile>
     <Compile Include="Forms\FormReservation.Designer.cs">
       <DependentUpon>FormReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewForm.Designer.cs">
+      <DependentUpon>NewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Country.cs" />

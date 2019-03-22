@@ -13,17 +13,6 @@ namespace Project
         {
             Reservations = new HashSet<Reservation>();
         }
-        public Client(string firstName, string lastName, string egn, int age, int townId, string gsm, string email)
-        {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.EGN = egn;
-            this.TownID = townId;
-            this.Age = age;
-            this.Gsm = gsm;
-            this.Email = email;
-            Reservations = new HashSet<Reservation>();
-        }
 
         public int Id { get; set; }
 
