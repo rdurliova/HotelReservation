@@ -36,16 +36,27 @@ namespace Project.Forms
         {
             InsertControler insert = new InsertControler();
             MessageApp message = new MessageApp();
-            bool isAdd = insert.InsertIntoRooms(comboBox1.Text, textBox1.Text);
-            if (isAdd)
+            if (textBox1.Text.Length==3)
+            
             {
-                MessageBox.Show(message.MessageInsertRoomTrue(comboBox1.Text));
+                bool isAdd = insert.InsertIntoRooms(comboBox1.Text, textBox1.Text);
+                if (isAdd)
+                {
+                    MessageBox.Show(message.MessageInsertRoomTrue(comboBox1.Text));
 
+                }
+                else
+                {
+                    MessageBox.Show(MessageApp.EnterCorrectValues);
+                }
+                
             }
             else
             {
+
                 MessageBox.Show(MessageApp.EnterCorrectValues);
             }
+            
         }
     }
 }

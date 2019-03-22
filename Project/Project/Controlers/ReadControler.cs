@@ -25,6 +25,12 @@ namespace Project.Controlers
             List<Town> returnTowns = context.Towns.ToList();
             return returnTowns;
         }
+
+        public List<Room>  FreeRooms()
+        {
+            var freeRooms = context.Rooms.Where(r => r.isFree == true).ToList();
+            return freeRooms;
+        }
      
 
         }

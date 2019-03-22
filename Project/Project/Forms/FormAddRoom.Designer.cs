@@ -41,15 +41,16 @@
             this.label1.Location = new System.Drawing.Point(11, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 32);
+            this.label1.Size = new System.Drawing.Size(161, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Номер на стая";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(235, 43);
+            this.textBox1.MaxLength = 3;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 38);
+            this.textBox1.Size = new System.Drawing.Size(182, 32);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -57,7 +58,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(38, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 32);
+            this.label2.Size = new System.Drawing.Size(129, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Тип на стая";
             // 
@@ -66,7 +67,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(235, 98);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 39);
+            this.comboBox1.Size = new System.Drawing.Size(182, 34);
             this.comboBox1.TabIndex = 3;
             // 
             // button1
@@ -81,7 +82,7 @@
             // 
             // FormAddRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 267);
             this.Controls.Add(this.button1);
