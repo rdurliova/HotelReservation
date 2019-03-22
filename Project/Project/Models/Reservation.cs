@@ -9,6 +9,20 @@ namespace Project
     [Table("Reservation")]
     public partial class Reservation
     {
+        public Reservation()
+        {
+
+        }
+        public Reservation(int idClient, int idRoom, DateTime startDate, DateTime finishDate, decimal payment, string paymentType)
+        {
+            this.IdClient = idClient;
+            this.IdRoom = idRoom;
+            this.DataStart = startDate;
+            this.DataFinish = finishDate;
+            this.Payment = payment;
+            this.PaymentType = paymentType;
+        }
+   
         public int Id { get; set; }
 
         public int? IdClient { get; set; }
