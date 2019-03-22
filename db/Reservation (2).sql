@@ -1,8 +1,7 @@
 /*
-create database Reservation;
+create database NewHotelReservation;
 go
-
-use reservation ;
+use NewHotelReservation;
 go
 
 --Създаване на таблица с име Countries
@@ -22,26 +21,20 @@ references Countries (Id) --връзка към таблица Countries, колона Id
 );
 go
 
-create table Types(
+create table RoomTypes(
 Id int primary key identity,
-Type varchar(20) unique);
+Type varchar(20) unique,
+Price decimal);
 go
 
 create table Rooms(
 Id int primary key identity,
+RoomNumebr varchar(3) unique,
 TypeId int not null,
+isFree bit,
 constraint fk_room_types
 foreign key (TypeId)
-references Types (Id)
-);
-go
-
-create table HotelBase(
-Id int primary key,
-IsFree bit
-constraint fk_hotelBase_rooms
-foreign key(Id)
-references Rooms (Id)
+references RoomTypes (Id)
 );
 go
 
@@ -71,10 +64,15 @@ PaymentType varchar(20),
 constraint fk_reservation_clients
 foreign key (IdClient)
 references Clients(Id),
-constraint fk_reservation_hotelBase
+constraint fk_reservation_rooms
 foreign key (IdRoom)
-references HotelBase(Id));
+references Rooms(Id));
 go
+
+insert into RoomTypes(Type,Price)  values
+('Single',30),
+('Double',50),
+('Apartment',100);
 
 --Добавяне на записи в таблица Countries
 insert into Countries(name) values 
@@ -100,6 +98,7 @@ insert into Countries(name) values
 ('Falkland Islands'),
 ('Micronesia'),
 ('Faroe Islands');
+go
 --Добавяне на записи в таблица
 insert into Towns (Name, CountryId) values
 ('Pleven', 1),
@@ -142,5 +141,12 @@ insert into Towns (Name, CountryId) values
 ('Reading',6),
 ('London',6);
 go
-*/
 
+insert into Rooms(RoomNumebr,TypeId,isFree) values
+(101,2,1),
+(102,1,1),
+(103,1,1),
+(104,2,1),
+(105,2,1),
+(106,1,1);
+*/
