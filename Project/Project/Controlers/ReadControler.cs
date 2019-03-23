@@ -31,9 +31,14 @@ namespace Project.Controlers
             var freeRooms = context.Rooms.Where(r => r.isFree == true).ToList();
             return freeRooms;
         }
-     
-
+        public List<Room> BusyRooms()
+        {
+            var busyRooms = context.Rooms.Where(r => r.isFree == false).ToList();
+            return busyRooms;
         }
+
+
+    }
 }
 
 

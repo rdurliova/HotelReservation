@@ -70,6 +70,12 @@
     <Compile Include="Forms\FormAddRoom.Designer.cs">
       <DependentUpon>FormAddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormClearRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormClearRoom.Designer.cs">
+      <DependentUpon>FormClearRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormInsertCoutriesAndTowns.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddRoom.resx">
       <DependentUpon>FormAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormClearRoom.resx">
+      <DependentUpon>FormClearRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormInsertCoutriesAndTowns.resx">
       <DependentUpon>FormInsertCoutriesAndTowns.cs</DependentUpon>
