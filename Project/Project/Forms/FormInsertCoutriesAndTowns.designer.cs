@@ -1,4 +1,4 @@
-﻿namespace ProjectHotelsReservation.Forms
+﻿namespace Project.Forms
 {
     partial class FormInsertCoutriesAndTowns
     {
@@ -45,7 +45,7 @@
             this.label1.Location = new System.Drawing.Point(9, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 31);
+            this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Държава";
             // 
@@ -55,7 +55,7 @@
             this.label2.Location = new System.Drawing.Point(9, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 31);
+            this.label2.Size = new System.Drawing.Size(60, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Град";
             // 
@@ -63,14 +63,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(148, 45);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 37);
+            this.textBox1.Size = new System.Drawing.Size(169, 31);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(148, 85);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 37);
+            this.textBox2.Size = new System.Drawing.Size(169, 31);
             this.textBox2.TabIndex = 3;
             // 
             // button1
@@ -97,7 +97,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(23, 48);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(193, 35);
+            this.radioButton2.Size = new System.Drawing.Size(155, 29);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Добави град";
@@ -109,7 +109,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(23, 13);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(248, 35);
+            this.radioButton1.Size = new System.Drawing.Size(198, 29);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Добави държава";
@@ -118,9 +118,9 @@
             // 
             // FormInsertCoutriesAndTowns
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 345);
+            this.ClientSize = new System.Drawing.Size(331, 354);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -133,6 +133,7 @@
             this.MinimumSize = new System.Drawing.Size(347, 392);
             this.Name = "FormInsertCoutriesAndTowns";
             this.Text = "Държава и град";
+            this.Load += new System.EventHandler(this.FormInsertCoutriesAndTowns_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

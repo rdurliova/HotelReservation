@@ -21,13 +21,14 @@ namespace Project.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddClients settingsForm = new AddClients();
-            settingsForm.Show();
+            AddClients form = new AddClients();
+            form.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            textBoxSpravki.Text = button4.Text;
             var clients = context.Clients.OrderBy(c=>c.FirstName).ThenBy(c=>c.LastName).ToList();
             foreach (var c in clients)
             {
@@ -39,19 +40,36 @@ namespace Project.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormReservation settingsForm = new FormReservation();
-            settingsForm.Show();
+            FormReservation form = new FormReservation();
+            form.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            textBoxSpravki.Text = button8.Text;
             var clients = context.Clients.Where(c=>c.Town.Country.Name=="Bulgaria").OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
             foreach (var c in clients)
             {
                 string fullName = string.Format($"{c.FirstName} {c.LastName}");
                 listBox1.Items.Add(fullName);
             }
+        }
+
+        private void buttonAddCountryAndTown_Click(object sender, EventArgs e)
+        {
+            FormInsertCoutriesAndTowns form = new FormInsertCoutriesAndTowns();
+            form.Show();
+        }
+
+        private void FormSystemOfHotelsReservation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

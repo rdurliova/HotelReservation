@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectHotelsReservation.Forms
+namespace Project.Forms
 {
     public partial class FormInsertCoutriesAndTowns : Form
     {
@@ -84,6 +84,11 @@ namespace ProjectHotelsReservation.Forms
         {
             textBox1.Text = string.Empty;
             textBox2.Text = string.Empty;
+        }
+
+        private void FormInsertCoutriesAndTowns_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
