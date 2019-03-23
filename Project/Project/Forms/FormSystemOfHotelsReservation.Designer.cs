@@ -201,6 +201,7 @@
             this.button7.TabIndex = 5;
             this.button7.Text = "Добавяне на данни за хотелска база";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // buttonAddCountryAndTown
             // 
@@ -208,7 +209,7 @@
             this.buttonAddCountryAndTown.Name = "buttonAddCountryAndTown";
             this.buttonAddCountryAndTown.Size = new System.Drawing.Size(228, 61);
             this.buttonAddCountryAndTown.TabIndex = 4;
-            this.buttonAddCountryAndTown.Text = "Добавяне на нов град";
+            this.buttonAddCountryAndTown.Text = "Добавяне на нов град и държава";
             this.buttonAddCountryAndTown.UseVisualStyleBackColor = true;
             this.buttonAddCountryAndTown.Click += new System.EventHandler(this.buttonAddCountryAndTown_Click);
             // 

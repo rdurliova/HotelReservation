@@ -71,5 +71,11 @@ namespace Project.Forms
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormAddRoom form = new FormAddRoom();
+            form.Show();
+        }
     }
 }
