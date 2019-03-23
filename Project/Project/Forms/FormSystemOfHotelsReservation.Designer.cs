@@ -144,7 +144,7 @@
             this.panel3.Controls.Add(this.button3);
             this.panel3.Location = new System.Drawing.Point(41, 305);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(964, 363);
+            this.panel3.Size = new System.Drawing.Size(961, 389);
             this.panel3.TabIndex = 4;
             // 
             // listBox1
@@ -167,7 +167,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(362, 276);
+            this.button10.Location = new System.Drawing.Point(362, 289);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(238, 84);
             this.button10.TabIndex = 8;
@@ -178,7 +178,7 @@
             // 
             this.button9.Location = new System.Drawing.Point(362, 196);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(238, 74);
+            this.button9.Size = new System.Drawing.Size(238, 87);
             this.button9.TabIndex = 7;
             this.button9.Text = "Списък на освободени стаи на днешна дата";
             this.button9.UseVisualStyleBackColor = true;
