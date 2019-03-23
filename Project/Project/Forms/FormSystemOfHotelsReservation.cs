@@ -27,6 +27,7 @@ namespace Project.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             var clients = context.Clients.OrderBy(c=>c.FirstName).ThenBy(c=>c.LastName).ToList();
             foreach (var c in clients)
             {
@@ -40,6 +41,17 @@ namespace Project.Forms
         {
             FormReservation settingsForm = new FormReservation();
             settingsForm.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            var clients = context.Clients.Where(c=>c.Town.Country.Name=="Bulgaria").OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
+            foreach (var c in clients)
+            {
+                string fullName = string.Format($"{c.FirstName} {c.LastName}");
+                listBox1.Items.Add(fullName);
+            }
         }
     }
 }

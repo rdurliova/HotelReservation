@@ -191,6 +191,7 @@
             this.button8.TabIndex = 6;
             this.button8.Text = "Списък на клиенти от България";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
