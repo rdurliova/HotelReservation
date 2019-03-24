@@ -57,5 +57,20 @@ namespace Project
                 return false; 
             }
         }
+        public bool UpdateStartDate(string egn, DateTime startDate)
+        {
+            var reservation = context.Reservations.FirstOrDefault(c => c.Client.EGN == egn);
+            if (reservation!=null)
+
+            {
+                reservation.DataStart = startDate;
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
+        }
     }
 }
