@@ -42,7 +42,20 @@ namespace Project
             {
                 return false;
             }
-            
+        }
+        public bool UpdateEndDate(string egn, DateTime finishDate )
+        {
+            var  reservation= context.Reservations.FirstOrDefault(c => c.Client.EGN==egn);
+            if (reservation != null)
+            {
+                reservation.DataFinish = finishDate;
+                context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
         }
     }
 }
