@@ -29,5 +29,20 @@ namespace Project
                 return false;
             }            
         }
+       public bool UpdateClientEmail(string egn, string email)
+        {
+            var client = context.Clients.FirstOrDefault(c => c.EGN == egn);
+            if (client!=null)
+            {
+                client.Email = email;
+                context.SaveChanges();
+                return true;           
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
     }
 }
