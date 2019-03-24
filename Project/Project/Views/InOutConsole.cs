@@ -96,7 +96,7 @@ namespace Project.Views
             Console.Write("Въведи начин на плащане: ");
             return Console.ReadLine();
         }
-
+        //Четене на информация - дата на настаняване
         public DateTime ReadStartDate()
         {
             Console.Write("Въведи начална дата във формат 'ден-месец-година':");
@@ -107,6 +107,7 @@ namespace Project.Views
             DateTime startDate = new DateTime(year, month, day);
             return startDate;
         }
+        //Четене на информация - дата на напускане
         public DateTime ReadEndDate()
         {
             Console.Write("Въведи крайна дата във формат 'ден-месец-година':");

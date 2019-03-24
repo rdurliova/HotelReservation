@@ -121,6 +121,7 @@
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomType.cs" />
     <Compile Include="Models\Town.cs" />
+    <Compile Include="Controlers\UpdateControler.cs" />
     <Compile Include="Views\InOutConsole.cs" />
     <Compile Include="Views\MenuConsole.cs" />
     <Compile Include="Views\MessageApp.cs" />
