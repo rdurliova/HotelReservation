@@ -92,15 +92,13 @@ namespace Project.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             var client = context.Clients.FirstOrDefault(c => c.EGN == textBox1.Text);
-            if (client!=null)
+            if (client != null)
             {
                 labelName.Text = string.Format($"{client.FirstName} {client.LastName}");
             }
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
+
+
     }
 }
