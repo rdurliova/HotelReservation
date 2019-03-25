@@ -150,3 +150,10 @@ insert into Rooms(RoomNumebr,TypeId,isFree) values
 (105,2,1),
 (106,1,1);
 */
+insert into Clients (FirstName,LastName, EGN, TownID, Age, Gsm, Email) values
+('Ivan', 'Georgiev', 1234567898,1,45,0887980981,'ivang'),
+('Mariya','Sokolova',1212121212,4,33,0986754321,'mariyaS'),
+('Valentina','Dospatska',3434353434,7,19,0888888888,'valqqq'),
+('Reshide', 'Durleva',0111111111,5,50,0777777777,'reshii'),
+('Mihail','Mihailov',0233333333,12,68,0654123455,'misho01'),
+('Aishe','Alkeeva',0412121212,2,22,0798120989,'aisheto01');
