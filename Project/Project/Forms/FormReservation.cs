@@ -14,15 +14,15 @@ namespace Project.Forms
 {
     public partial class FormReservation : Form
     {
-       public static HotelReservationContext context = new HotelReservationContext();
+        public static HotelReservationContext context = new HotelReservationContext();
         ReadControler read = new ReadControler(context);
         InsertControler insert = new InsertControler();
         public FormReservation()
         {
             InitializeComponent();
             LoadFreeRooms();
+            ResetLabel("-");
 
-            
         }
 
         private void LoadFreeRooms()
@@ -31,7 +31,7 @@ namespace Project.Forms
             foreach (var r in freeRooms)
             {
                 comboBox1.Items.Add(r.RoomNumebr);
-                
+
             }
         }
 
@@ -48,8 +48,8 @@ namespace Project.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var client =context.Clients.FirstOrDefault(c=>c.EGN==textBox1.Text);
-            if (client!=null && comboBox2.Text!=string.Empty)
+            var client = context.Clients.FirstOrDefault(c => c.EGN == textBox1.Text);
+            if (client != null && comboBox2.Text != string.Empty)
             {
                 bool isAdd = insert.InsertIntoReservation(textBox1.Text, comboBox1.Text, dateTimePicker1.Value.Date, dateTimePicker2.Value.Date, decimal.Parse(comboBox2.Text), textBox3.Text);
                 if (isAdd)
@@ -95,10 +95,34 @@ namespace Project.Forms
             if (client != null)
             {
                 labelName.Text = string.Format($"{client.FirstName} {client.LastName}");
+                labelTown.Text = client.Town.Name;
+                labelCountry.Text = client.Town.Country.Name;
+                labelAge.Text = client.Age.ToString();
+                labelGsm.Text = client.Gsm;
+                labelEmail.Text = client.Email;
             }
+            else
+            {
+                ResetLabel("-");
+            }
+
 
         }
 
+        private void ResetLabel( string text)
+        {
+        
+            labelName.Text = text;
+            labelTown.Text = text;
+            labelCountry.Text = text;
+            labelAge.Text = text;
+            labelGsm.Text = text;
+            labelEmail.Text = text;
+        }
 
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
