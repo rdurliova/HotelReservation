@@ -82,6 +82,12 @@
     <Compile Include="Forms\FormInsertCoutriesAndTowns.designer.cs">
       <DependentUpon>FormInsertCoutriesAndTowns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormReadClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReadClient.Designer.cs">
+      <DependentUpon>FormReadClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormReadCountry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormInsertCoutriesAndTowns.resx">
       <DependentUpon>FormInsertCoutriesAndTowns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReadClient.resx">
+      <DependentUpon>FormReadClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormReadCountry.resx">
       <DependentUpon>FormReadCountry.cs</DependentUpon>
