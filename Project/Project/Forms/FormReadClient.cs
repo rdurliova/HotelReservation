@@ -43,8 +43,31 @@ namespace Project.Forms
             labelEmail.Text = clients[index].Email;
 
 
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           Client client= clients.FirstOrDefault(c => c.EGN == textBox1.Text);
+            if (client!=null)
+            {
+                labelName.Text = client.FirstName + " " + client.LastName;
+                labelEgn.Text = client.EGN;
+                labelTown.Text = client.Town.Name;
+                labelCountry.Text = client.Town.Country.Name;
+                labelAge.Text = client.Age.ToString();
+                labelGsm.Text = client.Gsm;
+                labelEmail.Text = client.Email;
+            }
+            else
+            {
+                MessageBox.Show("Клиент с търсеното ЕГН не съществува!");
+
+            }
         }
     }
 }
