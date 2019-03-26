@@ -12,7 +12,8 @@ namespace Project.Forms
 {
     public partial class FormReadClient : Form
     {
-        HotelReservationContext context = new HotelReservationContext();
+        private static HotelReservationContext context = new HotelReservationContext();
+        List<Client> clients = context.Clients.OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
         public FormReadClient()
         {
             InitializeComponent();
@@ -20,19 +21,18 @@ namespace Project.Forms
 
         private void FormReadClient_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             listBox1.Items.Clear();
             
-            var clients = context.Clients.OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
             foreach (var c in clients)
             {
                 string fullName = string.Format($"{c.FirstName} {c.LastName}");
                 listBox1.Items.Add(fullName);
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

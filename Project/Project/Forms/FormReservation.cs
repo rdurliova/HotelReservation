@@ -124,5 +124,10 @@ namespace Project.Forms
         {
 
         }
+
+        private void FormReservation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
