@@ -36,6 +36,14 @@ namespace Project.Forms
             int index = listBox1.SelectedIndex;
             labelName.Text = clients[index].FirstName+" "+clients[index].LastName;
             labelEgn.Text = clients[index].EGN;
+            labelTown.Text = clients[index].Town.Name;
+            labelCountry.Text = clients[index].Town.Country.Name;
+            labelAge.Text = clients[index].Age.ToString();
+            labelGsm.Text = clients[index].Gsm;
+            labelEmail.Text = clients[index].Email;
+
+
+
 
         }
     }
