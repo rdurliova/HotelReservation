@@ -44,6 +44,8 @@
             this.labelName = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelEgn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -208,11 +210,33 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Информация за клиент";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(409, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 25);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "ЕГН";
+            // 
+            // labelEgn
+            // 
+            this.labelEgn.AutoSize = true;
+            this.labelEgn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEgn.Location = new System.Drawing.Point(606, 122);
+            this.labelEgn.Name = "labelEgn";
+            this.labelEgn.Size = new System.Drawing.Size(70, 25);
+            this.labelEgn.TabIndex = 45;
+            this.labelEgn.Text = "label2";
+            // 
             // FormReadClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 547);
+            this.Controls.Add(this.labelEgn);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCountry);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.labelEmail);
@@ -255,5 +279,7 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelEgn;
     }
 }
