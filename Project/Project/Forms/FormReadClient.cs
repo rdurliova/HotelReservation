@@ -22,7 +22,7 @@ namespace Project.Forms
         private void FormReadClient_Load(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            
+
             foreach (var c in clients)
             {
                 string fullName = string.Format($"{c.FirstName} {c.LastName}");
@@ -33,7 +33,8 @@ namespace Project.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int index = listBox1.SelectedIndex;
+            labelName.Text = clients[index].FirstName+" "+clients[index].LastName;
         }
     }
 }
