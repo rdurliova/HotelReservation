@@ -29,7 +29,7 @@ namespace Project.Forms
         {
             listBox1.Items.Clear();
             textBoxSpravki.Text = button4.Text;
-            var clients = context.Clients.OrderBy(c=>c.FirstName).ThenBy(c=>c.LastName).ToList();
+            var clients = context.Clients.OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
             foreach (var c in clients)
             {
                 string fullName = string.Format($"{c.FirstName} {c.LastName}");
@@ -48,7 +48,7 @@ namespace Project.Forms
         {
             listBox1.Items.Clear();
             textBoxSpravki.Text = button8.Text;
-            var clients = context.Clients.Where(c=>c.Town.Country.Name=="Bulgaria").OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
+            var clients = context.Clients.Where(c => c.Town.Country.Name == "Bulgaria").OrderBy(c => c.FirstName).ThenBy(c => c.LastName).ToList();
             foreach (var c in clients)
             {
                 string fullName = string.Format($"{c.FirstName} {c.LastName}");
@@ -76,6 +76,31 @@ namespace Project.Forms
         {
             FormAddRoom form = new FormAddRoom();
             form.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormReadClient form = new FormReadClient();
+            form.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormClearRoom form = new FormClearRoom();
+            form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            textBoxSpravki.Text = button9.Text;
+            var rooms = context.Rooms.Where(r=>r.isFree==true).ToList();
+            foreach (var r in rooms)
+            {
+                string room = string.Format($"{r.RoomNumebr} - {r.RoomType.Type}");
+                listBox1.Items.Add(room);
+            }
         }
     }
 }

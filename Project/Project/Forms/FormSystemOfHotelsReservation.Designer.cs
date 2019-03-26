@@ -37,6 +37,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxSpravki = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBoxSpravki = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +82,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Освобождаване на стая";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -147,6 +149,18 @@
             this.panel3.Size = new System.Drawing.Size(961, 389);
             this.panel3.TabIndex = 4;
             // 
+            // textBoxSpravki
+            // 
+            this.textBoxSpravki.Enabled = false;
+            this.textBoxSpravki.Location = new System.Drawing.Point(668, 34);
+            this.textBoxSpravki.Multiline = true;
+            this.textBoxSpravki.Name = "textBoxSpravki";
+            this.textBoxSpravki.Size = new System.Drawing.Size(234, 66);
+            this.textBoxSpravki.TabIndex = 11;
+            this.textBoxSpravki.Text = "Информация от справки";
+            this.textBoxSpravki.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxSpravki.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -180,8 +194,9 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(238, 87);
             this.button9.TabIndex = 7;
-            this.button9.Text = "Списък на освободени стаи на днешна дата";
+            this.button9.Text = "Списък на свободни стаи на днешна дата";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -242,23 +257,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBoxSpravki
+            // button6
             // 
-            this.textBoxSpravki.Enabled = false;
-            this.textBoxSpravki.Location = new System.Drawing.Point(668, 34);
-            this.textBoxSpravki.Multiline = true;
-            this.textBoxSpravki.Name = "textBoxSpravki";
-            this.textBoxSpravki.Size = new System.Drawing.Size(234, 66);
-            this.textBoxSpravki.TabIndex = 11;
-            this.textBoxSpravki.Text = "Информация от справки";
-            this.textBoxSpravki.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxSpravki.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.button6.Location = new System.Drawing.Point(1026, 109);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(165, 76);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FormSystemOfHotelsReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1282, 750);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -300,5 +314,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBoxSpravki;
+        private System.Windows.Forms.Button button6;
     }
 }

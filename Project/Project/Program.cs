@@ -14,7 +14,7 @@ namespace Project
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
-            Application.Run(new FormReadClient());
+            Application.Run(new FormSystemOfHotelsReservation());
 
           //ConsoleControler controler = new ConsoleControler();
         }
