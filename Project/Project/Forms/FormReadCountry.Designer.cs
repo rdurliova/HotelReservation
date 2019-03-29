@@ -63,45 +63,47 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 44);
+            this.label3.Location = new System.Drawing.Point(163, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 25);
+            this.label3.Size = new System.Drawing.Size(19, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.label3.Text = "-";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(160, 93);
+            this.label4.Location = new System.Drawing.Point(163, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 25);
+            this.label4.Size = new System.Drawing.Size(19, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.label4.Text = "-";
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(17, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 36);
             this.button1.TabIndex = 4;
             this.button1.Text = "Предишен";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(161, 148);
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(168, 148);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 36);
+            this.button2.Size = new System.Drawing.Size(126, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "Следващ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(66, 209);
+            this.checkBox1.Location = new System.Drawing.Point(49, 210);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(116, 29);
             this.checkBox1.TabIndex = 6;
@@ -120,16 +122,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 256);
+            this.textBox1.Location = new System.Drawing.Point(133, 253);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 31);
             this.textBox1.TabIndex = 8;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(49, 295);
+            this.button3.Location = new System.Drawing.Point(62, 329);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 33);
+            this.button3.Size = new System.Drawing.Size(205, 40);
             this.button3.TabIndex = 9;
             this.button3.Text = "Търси";
             this.button3.UseVisualStyleBackColor = true;
