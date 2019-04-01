@@ -9,6 +9,17 @@ namespace Project
     public partial class Client
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        private int id;
+        private string firstName;
+        private string lastName;
+        private string egn;
+        private int age;
+        private int townId;
+        private string gsm;
+        private string email;
+
+        
+
         public Client()
         {
             Reservations = new HashSet<Reservation>();
