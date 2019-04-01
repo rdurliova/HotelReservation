@@ -9,11 +9,11 @@ namespace Project.Controlers
     public class InsertControler
     {
         private static HotelReservationContext context = new HotelReservationContext();
-        private static Find find = new Find();
+        private static ReadControler read = new ReadControler(context);
 
         public bool InsertIntoCoutries(string coutryName)
         {
-            if (find.FindCountry(coutryName) == null)
+            if (read.FindCountry(coutryName) == null)
             {
                 context.Countries.Add(
                     new Country() { Name = coutryName });
@@ -28,15 +28,12 @@ namespace Project.Controlers
 
         public bool InsertIntoTowns(string townName, string countryName)
         {
-            Town findTown = find.FindTown(countryName, townName);
+            Town findTown = read.FindTown(countryName, townName);
             if (findTown == null)
             {
                 InsertIntoCoutries(countryName);
-                Town newTown = new Town()
-                {
-                    Name = townName,
-                    CountryId = find.FindCountry(countryName).Id
-                };
+                int countryId = read.FindCountry(countryName).Id;
+                Town newTown = new Town(townName, countryId);
                 context.Towns.Add(newTown);
                 context.SaveChanges();
                 return true;
@@ -49,7 +46,7 @@ namespace Project.Controlers
 
         public bool InsertIntoRooms(string roomType, string roomNumber)
         {
-            RoomType findType = find.FindType(roomType);
+            RoomType findType = read.FindType(roomType);
             if (findType != null)
             {
                 Room newRoom = new Room
@@ -67,12 +64,12 @@ namespace Project.Controlers
                 return false;
 
             }
-            
+
         }
         public bool InsertIntoClients(string firstName, string lastName, string egn, int age, string townName, string countryName, string gsm, string email)
         {
-            var town = find.FindTown(countryName, townName);
-            if (town!=null)
+            var town = read.FindTown(countryName, townName);
+            if (town != null)
             {
                 Client newClient = new Client(firstName, lastName, egn, age, town.Id, gsm, email);
                 context.Clients.Add(newClient);
@@ -84,11 +81,11 @@ namespace Project.Controlers
                 return false;
             }
         }
-        public bool InsertIntoReservation(string egn,string roomNumber,DateTime startDate, DateTime endDate,decimal pay,string paymentType)
+        public bool InsertIntoReservation(string egn, string roomNumber, DateTime startDate, DateTime endDate, decimal pay, string paymentType)
         {
-            Client client = find.GetClientByEGN(egn);
-            Room room = find.GetRoomByNumber(roomNumber);
-            if (client!=null && room!=null && endDate>startDate)
+            Client client = read.GetClientByEGN(egn);
+            Room room = read.GetRoomByNumber(roomNumber);
+            if (client != null && room != null && endDate > startDate)
             {
                 Reservation newReservation = new Reservation(client.Id, room.Id, startDate, endDate, pay, paymentType);
                 context.Reservations.Add(newReservation);
@@ -99,7 +96,7 @@ namespace Project.Controlers
             {
                 return false;
             }
-            
+
         }
 
     }

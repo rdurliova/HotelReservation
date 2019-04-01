@@ -14,12 +14,14 @@ namespace Project.Forms
 {
     public partial class FormAddRoom : Form
     {
-        HotelReservationContext context = new HotelReservationContext();
-        Find find = new Find();
-        public FormAddRoom()
+        private HotelReservationContext context;
+        private ReadControler read;
+        public FormAddRoom(HotelReservationContext context, ReadControler read)
         {
             InitializeComponent();
-            List<RoomType> listTypes = find.AllTypes();
+            this.context = context;
+            this.read = read;
+            List<RoomType> listTypes = read.AllTypes();
             foreach (var t in listTypes)
             {
                 comboBox1.Items.Add(t.Type);
@@ -29,15 +31,15 @@ namespace Project.Forms
 
         private void FormAddRoom_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             InsertControler insert = new InsertControler();
             MessageApp message = new MessageApp();
-            if (textBox1.Text.Length==3)
-            
+            if (textBox1.Text.Length == 3)
+
             {
                 bool isAdd = insert.InsertIntoRooms(comboBox1.Text, textBox1.Text);
                 if (isAdd)
@@ -49,14 +51,14 @@ namespace Project.Forms
                 {
                     MessageBox.Show(MessageApp.EnterCorrectValues);
                 }
-                
+
             }
             else
             {
 
                 MessageBox.Show(MessageApp.EnterCorrectValues);
             }
-            
+
         }
     }
 }

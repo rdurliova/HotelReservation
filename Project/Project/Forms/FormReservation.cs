@@ -14,12 +14,15 @@ namespace Project.Forms
 {
     public partial class FormReservation : Form
     {
-        public static HotelReservationContext context = new HotelReservationContext();
-        ReadControler read = new ReadControler(context);
-        InsertControler insert = new InsertControler();
-        public FormReservation()
+        private HotelReservationContext context;
+        private ReadControler read;
+        private InsertControler insert;
+        public FormReservation(HotelReservationContext context, ReadControler read, InsertControler insert)
         {
             InitializeComponent();
+            this.context = context;
+            this.read = read;
+            this.insert = insert;
             LoadFreeRooms();
             ResetLabel("-");
 
@@ -31,7 +34,6 @@ namespace Project.Forms
             foreach (var r in freeRooms)
             {
                 comboBox1.Items.Add(r.RoomNumebr);
-
             }
         }
 
@@ -68,7 +70,7 @@ namespace Project.Forms
             }
             else
             {
-                AddClients settingsForm = new AddClients();
+                AddClients settingsForm = new AddClients(context);
                 settingsForm.Show();
             }
         }
@@ -109,9 +111,9 @@ namespace Project.Forms
 
         }
 
-        private void ResetLabel( string text)
+        private void ResetLabel(string text)
         {
-        
+
             labelName.Text = text;
             labelTown.Text = text;
             labelCountry.Text = text;

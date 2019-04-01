@@ -26,6 +26,14 @@ namespace Project.Views
             Console.Write("Избери команда: ");
             return Console.ReadLine();
         }
-        
+
+        internal string MainMenu()
+        {
+            Console.WriteLine("1 - Добавяне");
+            Console.WriteLine("2 - Преглед");
+            Console.WriteLine("3 - Графичен интерфейс");
+            Console.Write("Избери команда: ");
+            return Console.ReadLine();
+        }
     }
 }

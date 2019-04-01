@@ -46,7 +46,7 @@
             this.label1.Location = new System.Drawing.Point(44, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 25);
+            this.label1.Size = new System.Drawing.Size(42, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -56,56 +56,54 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(44, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 25);
+            this.label2.Size = new System.Drawing.Size(68, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Име";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(163, 44);
+            this.label3.Location = new System.Drawing.Point(160, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 25);
+            this.label3.Size = new System.Drawing.Size(86, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "-";
+            this.label3.Text = "label3";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(163, 93);
+            this.label4.Location = new System.Drawing.Point(160, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 25);
+            this.label4.Size = new System.Drawing.Size(86, 31);
             this.label4.TabIndex = 3;
-            this.label4.Text = "-";
+            this.label4.Text = "label4";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(17, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 36);
             this.button1.TabIndex = 4;
             this.button1.Text = "Предишен";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(168, 148);
+            this.button2.Location = new System.Drawing.Point(161, 148);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 36);
+            this.button2.Size = new System.Drawing.Size(121, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "Следващ";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(49, 210);
+            this.checkBox1.Location = new System.Drawing.Point(66, 209);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(116, 29);
+            this.checkBox1.Size = new System.Drawing.Size(144, 35);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Търсене";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -116,22 +114,22 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(28, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 25);
+            this.label5.Size = new System.Drawing.Size(68, 31);
             this.label5.TabIndex = 7;
             this.label5.Text = "Име";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 253);
+            this.textBox1.Location = new System.Drawing.Point(130, 256);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 31);
+            this.textBox1.Size = new System.Drawing.Size(152, 37);
             this.textBox1.TabIndex = 8;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(62, 329);
+            this.button3.Location = new System.Drawing.Point(50, 311);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 40);
+            this.button3.Size = new System.Drawing.Size(197, 44);
             this.button3.TabIndex = 9;
             this.button3.Text = "Търси";
             this.button3.UseVisualStyleBackColor = true;
@@ -139,7 +137,7 @@
             // 
             // FormReadCountry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 406);
             this.Controls.Add(this.button3);

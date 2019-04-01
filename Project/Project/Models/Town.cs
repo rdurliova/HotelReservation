@@ -8,16 +8,37 @@ namespace Project
 
     public partial class Town
     {
+        private string name;
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Town()
         {
+            Clients = new HashSet<Client>();
+        }
+        public Town(string townName, int id)
+        {
+            this.Name = townName;
+            this.Id = id;
             Clients = new HashSet<Client>();
         }
 
         public int Id { get; set; }
 
         [StringLength(50)]
-        public string Name { get; set; }
+        public string Name
+        {
+            get { return this.name; }
+            set
+            {
+                if (value.Length > 3)
+                {
+                    this.name = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Името на града трябва да е по-дълго от 3 символа!");
+                }
+            }
+        }
 
         public int CountryId { get; set; }
 

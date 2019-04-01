@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlers\ConsoleControler.cs" />
-    <Compile Include="Controlers\Find.cs" />
     <Compile Include="Controlers\InsertControler.cs" />
     <Compile Include="Controlers\ReadControler.cs" />
     <Compile Include="Forms\AddClients.cs">

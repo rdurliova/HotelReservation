@@ -14,13 +14,17 @@ namespace Project.Forms
 {
     public partial class AddClients : Form
     {
-       private static HotelReservationContext context = new HotelReservationContext();
-        InsertControler insert = new InsertControler();
-        ReadControler read = new ReadControler(context);
-        MessageApp message = new MessageApp();
-        public AddClients()
+        private HotelReservationContext context;
+        private InsertControler insert;
+        private ReadControler read;
+        private MessageApp message;
+        public AddClients(HotelReservationContext context)
         {
             InitializeComponent();
+            this.context = context;
+            message = new MessageApp();
+            insert = new InsertControler();
+            read = new ReadControler(context);
             List<Town> towns = read.TownsList();
             List<Country> countries = read.CounrtiesList();
             foreach (var t in towns)
@@ -50,7 +54,7 @@ namespace Project.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.TextLength>3 &&textBox2.TextLength>3)
+            if (textBox1.TextLength > 3 && textBox2.TextLength > 3)
             {
                 if (textBox3.TextLength == 10)
                 {

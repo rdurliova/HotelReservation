@@ -15,17 +15,23 @@ namespace Project.Forms
 {
     public partial class FormInsertCoutriesAndTowns : Form
     {
-        public FormInsertCoutriesAndTowns()
+
+        private HotelReservationContext context ;
+        private InsertControler controler = new InsertControler();
+        private MessageApp message ;
+
+        public FormInsertCoutriesAndTowns(HotelReservationContext context, InsertControler controler, MessageApp message)
         {
             InitializeComponent();
+            this.context = context;
+            this.controler = controler;
+            this.message = message;
             radioButton1.Checked = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HotelReservationContext context = new HotelReservationContext();
-            InsertControler controler = new InsertControler();
-            MessageApp message = new MessageApp();
+
 
             if (radioButton1.Checked)
             {

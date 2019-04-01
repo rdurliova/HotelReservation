@@ -1,10 +1,12 @@
 ﻿
+using Project.Forms;
 using Project.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project.Controlers
 {
@@ -20,9 +22,41 @@ namespace Project.Controlers
 
         public ConsoleControler()
         {
-            Add();
+            MainMenu();
         }
 
+        public void MainMenu()
+        {
+            while (true)
+            {
+                try
+                {
+                    switch (menu.MainMenu())
+                    {
+
+                        case "1":
+                            Add();
+                            break;
+                        case "2":
+                            Read();
+                            break;
+                        case "3":
+                            Application.EnableVisualStyles();
+                            Application.Run(new FormSystemOfHotelsReservation(context, insert, read, message));
+                            break;
+
+                        default: return;
+                            //  break;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
+        }
         public void Add()
         {
             while (true)

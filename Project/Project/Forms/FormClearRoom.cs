@@ -13,17 +13,19 @@ namespace Project.Forms
 {
     public partial class FormClearRoom : Form
     {
-       private static HotelReservationContext context = new HotelReservationContext();
-        ReadControler read = new ReadControler(context);
-        public FormClearRoom()
+        private HotelReservationContext context;
+        private ReadControler read;
+        public FormClearRoom(HotelReservationContext context)
         {
             InitializeComponent();
+            this.context = context;
+            read = new ReadControler(context);
         }
 
         private void FormClearRoom_Load(object sender, EventArgs e)
         {
             var rooms = read.BusyRooms();
-            if (rooms.Count==0)
+            if (rooms.Count == 0)
             {
                 listBox1.Items.Add("Няма заети стаи!");
                 listBox1.Enabled = false;
@@ -36,12 +38,12 @@ namespace Project.Forms
                     listBox1.Items.Add(r.RoomNumebr);
                 }
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            context.Rooms.FirstOrDefault(r => r.RoomNumebr == listBox1.SelectedItem.ToString()).isFree=true;
+            context.Rooms.FirstOrDefault(r => r.RoomNumebr == listBox1.SelectedItem.ToString()).isFree = true;
             context.SaveChanges();
             var rooms = read.BusyRooms();
             listBox1.Items.Clear();

@@ -14,16 +14,19 @@ namespace Project.Forms
 {
     public partial class FormReadTown : Form
     {
-        private static HotelReservationContext context = new HotelReservationContext();
-        private static ReadControler read = new ReadControler(context);
-        private static Find find = new Find();
-        int count = 0;
-        List<Town> towns = read.TownsList();
-        List<Country> countries = read.CounrtiesList();
+        private HotelReservationContext context;
+        private ReadControler read;
+        private int count = 0;
+        private List<Town> towns;
+        private List<Country> countries;
 
-        public FormReadTown()
+        public FormReadTown(HotelReservationContext context, ReadControler read)
         {
             InitializeComponent();
+            this.context = context;
+            this.read = read;
+            towns = read.TownsList();
+            countries = read.CounrtiesList();
         }
 
         private void FormReadTown_Load(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace Project.Forms
             label4.Text = towns.First().Name;
             label8.Text = towns[count].Country.Name;
         }
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -83,7 +86,7 @@ namespace Project.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Town findTown = find.FindTown(textBox1.Text,textBox2.Text);
+            Town findTown = read.FindTown(textBox1.Text, textBox2.Text);
             if (findTown != null)
             {
                 count = 0;
@@ -97,9 +100,6 @@ namespace Project.Forms
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

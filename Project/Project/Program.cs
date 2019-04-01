@@ -1,22 +1,12 @@
-﻿using Project.Controlers;
-using Project.Forms;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Project
+﻿namespace Project
 {
+    using Project.Controlers;
+
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.Run(new FormSystemOfHotelsReservation());
-
-          //ConsoleControler controler = new ConsoleControler();
+            ConsoleControler controler = new ConsoleControler();
         }
     }
 }

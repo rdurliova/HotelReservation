@@ -14,15 +14,16 @@ namespace Project.Forms
 {
     public partial class FormReadCountry : Form
     {
-        private static HotelReservationContext context = new HotelReservationContext();
-        private static ReadControler read = new ReadControler(context);
-        private static Find find = new Find();
+        private  HotelReservationContext context ;
+        private  ReadControler read ;
         int count = 0;
-        List<Country> countries = read.CounrtiesList();
-        public FormReadCountry()
+        List<Country> countries;
+        public FormReadCountry(HotelReservationContext context, ReadControler read)
         {
             InitializeComponent();
-           
+            this.context = context;
+            this.read = read;
+            countries = read.CounrtiesList();
         }
 
         private void FormReadCountry_Load(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace Project.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Country findCountry = find.FindCountry(textBox1.Text);
+            Country findCountry = read.FindCountry(textBox1.Text);
             if (findCountry!=null)
             {
                 count = 0;
