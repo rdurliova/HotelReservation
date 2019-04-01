@@ -86,9 +86,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(56, 73);
+            this.button1.Location = new System.Drawing.Point(33, 73);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(322, 37);
+            this.button1.Size = new System.Drawing.Size(363, 37);
             this.button1.TabIndex = 0;
             this.button1.Text = "Резервация на стая";
             this.button1.UseVisualStyleBackColor = true;
@@ -97,12 +97,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(313, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(318, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 25);
+            this.label1.Size = new System.Drawing.Size(497, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Система за хотелски резервации";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -115,18 +117,18 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(49, 100);
+            this.button11.Location = new System.Drawing.Point(59, 128);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(259, 36);
+            this.button11.Size = new System.Drawing.Size(268, 36);
             this.button11.TabIndex = 3;
             this.button11.Text = "Отчет на стая за освобождаване на днешна дата";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(58, 43);
+            this.button5.Location = new System.Drawing.Point(59, 73);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(259, 36);
+            this.button5.Size = new System.Drawing.Size(268, 36);
             this.button5.TabIndex = 2;
             this.button5.Text = "Отчет за видовете стаи в хотелска база";
             this.button5.UseVisualStyleBackColor = true;
@@ -152,10 +154,10 @@
             // textBoxSpravki
             // 
             this.textBoxSpravki.Enabled = false;
-            this.textBoxSpravki.Location = new System.Drawing.Point(668, 34);
+            this.textBoxSpravki.Location = new System.Drawing.Point(668, 43);
             this.textBoxSpravki.Multiline = true;
             this.textBoxSpravki.Name = "textBoxSpravki";
-            this.textBoxSpravki.Size = new System.Drawing.Size(234, 66);
+            this.textBoxSpravki.Size = new System.Drawing.Size(234, 57);
             this.textBoxSpravki.TabIndex = 11;
             this.textBoxSpravki.Text = "Информация от справки";
             this.textBoxSpravki.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -165,7 +167,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(668, 121);
+            this.listBox1.Location = new System.Drawing.Point(668, 135);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(234, 229);
             this.listBox1.TabIndex = 10;
@@ -173,15 +175,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(374, 22);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(428, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 25);
+            this.label4.Size = new System.Drawing.Size(112, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "Справки";
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(362, 289);
+            this.button10.Location = new System.Drawing.Point(362, 300);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(238, 84);
             this.button10.TabIndex = 8;
@@ -190,7 +193,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(362, 196);
+            this.button9.Location = new System.Drawing.Point(362, 207);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(238, 87);
             this.button9.TabIndex = 7;
@@ -200,9 +203,9 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(362, 121);
+            this.button8.Location = new System.Drawing.Point(362, 135);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(238, 69);
+            this.button8.Size = new System.Drawing.Size(238, 66);
             this.button8.TabIndex = 6;
             this.button8.Text = "Списък на клиенти от България";
             this.button8.UseVisualStyleBackColor = true;
@@ -210,9 +213,9 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(33, 212);
+            this.button7.Location = new System.Drawing.Point(33, 223);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(254, 71);
+            this.button7.Size = new System.Drawing.Size(259, 71);
             this.button7.TabIndex = 5;
             this.button7.Text = "Добавяне на данни за хотелска база";
             this.button7.UseVisualStyleBackColor = true;
@@ -220,9 +223,9 @@
             // 
             // buttonAddCountryAndTown
             // 
-            this.buttonAddCountryAndTown.Location = new System.Drawing.Point(49, 145);
+            this.buttonAddCountryAndTown.Location = new System.Drawing.Point(33, 143);
             this.buttonAddCountryAndTown.Name = "buttonAddCountryAndTown";
-            this.buttonAddCountryAndTown.Size = new System.Drawing.Size(228, 61);
+            this.buttonAddCountryAndTown.Size = new System.Drawing.Size(259, 66);
             this.buttonAddCountryAndTown.TabIndex = 4;
             this.buttonAddCountryAndTown.Text = "Добавяне на нов град и държава";
             this.buttonAddCountryAndTown.UseVisualStyleBackColor = true;
@@ -231,17 +234,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 19);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(36, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 25);
+            this.label3.Size = new System.Drawing.Size(256, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Въвеждане на данни";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(362, 50);
+            this.button4.Location = new System.Drawing.Point(362, 60);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(224, 65);
+            this.button4.Size = new System.Drawing.Size(238, 65);
             this.button4.TabIndex = 1;
             this.button4.Text = "Азбучен списък на клиенти";
             this.button4.UseVisualStyleBackColor = true;
@@ -259,7 +263,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1026, 109);
+            this.button6.Location = new System.Drawing.Point(1029, 129);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(165, 76);
             this.button6.TabIndex = 5;
@@ -271,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 750);
+            this.ClientSize = new System.Drawing.Size(1282, 749);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
