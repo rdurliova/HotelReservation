@@ -9,16 +9,46 @@ namespace Project
     public partial class Country
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        private int id;
+        private string name;
+
         public Country()
         {
             Towns = new HashSet<Town>();
         }
 
-        public int Id { get; set; }
+        public int Id
+        {
+            get { return this.id; }
+            set
+            {
+                if (value > 0)
+                {
+                    this.id = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Town Id must be grater than 0!");
+                }
+            }
+        }
 
         [StringLength(50)]
-        public string Name { get; set; }
-
+        public string Name
+        {
+            get { return this.name; }
+            set
+            {
+                if (value.Length >=3)
+                {
+                    this.name = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Name length must be more or equals 3 symbols!");
+                }
+            }
+        }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Town> Towns { get; set; }
     }
