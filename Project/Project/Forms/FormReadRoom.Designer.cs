@@ -34,8 +34,8 @@
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelType = new System.Windows.Forms.Label();
             this.labelNumber = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -98,25 +98,27 @@
             this.labelNumber.TabIndex = 5;
             this.labelNumber.Text = "-";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(112, 254);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 42);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Предишен";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
+            this.button2.BackgroundImage = global::Project.Properties.Resources.right;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(362, 254);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 42);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Следващ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Project.Properties.Resources.left;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(112, 254);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 42);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormReadRoom
             // 
