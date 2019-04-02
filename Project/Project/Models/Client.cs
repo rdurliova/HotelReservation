@@ -82,7 +82,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new ArgumentException("Name length must be equals 10!");
+                    //throw new ArgumentException("Name length must be equals 10!");
                 }
             }
         }
@@ -148,7 +148,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new ArgumentException("Name length must be more than 3 symbols!");
+                    //throw new ArgumentException("Name length must be more than 3 symbols!");
                 }
             }
         }

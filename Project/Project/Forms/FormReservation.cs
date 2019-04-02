@@ -17,6 +17,7 @@ namespace Project.Forms
         private HotelReservationContext context;
         private ReadControler read;
         private InsertControler insert;
+         private List<Room> freeRooms;
         public FormReservation(HotelReservationContext context, ReadControler read, InsertControler insert)
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace Project.Forms
 
         private void LoadFreeRooms()
         {
-            var freeRooms = read.FreeRooms();
+            freeRooms = read.FreeRooms();
             foreach (var r in freeRooms)
             {
                 comboBox1.Items.Add(r.RoomNumebr);
@@ -82,7 +83,7 @@ namespace Project.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            comboBox2.Text = freeRooms.FirstOrDefault(r=>r.RoomNumebr==comboBox1.Text).RoomType.Price.ToString();
 
         }
 
