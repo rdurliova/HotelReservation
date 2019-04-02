@@ -116,5 +116,30 @@ namespace Project.Forms
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            FormReadClient form = new FormReadClient(context);
+            form.Show();
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            FormReadCountry form = new FormReadCountry(context,read);
+            form.Show();
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            FormReadRoom form = new FormReadRoom(context,read);
+            form.Show();
+        }
     }
 }

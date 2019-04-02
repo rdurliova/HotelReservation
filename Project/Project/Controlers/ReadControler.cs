@@ -14,7 +14,11 @@ namespace Project.Controlers
         {
             this.context = context;
         }
-
+        public List<Room> RoomsList()
+        {
+            List<Room> returnRooms = context.Rooms.ToList();
+            return returnRooms;
+        }
         public List<Country> CounrtiesList()
         {
             List<Country> returnCountries = context.Countries.ToList();

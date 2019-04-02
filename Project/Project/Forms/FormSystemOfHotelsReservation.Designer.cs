@@ -34,8 +34,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSpravki = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -108,30 +111,63 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button13);
+            this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(576, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 199);
+            this.panel2.Size = new System.Drawing.Size(412, 212);
             this.panel2.TabIndex = 3;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(90, 172);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(202, 34);
+            this.button13.TabIndex = 8;
+            this.button13.Text = "Стаи";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(89, 132);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(202, 34);
+            this.button12.TabIndex = 7;
+            this.button12.Text = "Градове";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(59, 128);
+            this.button11.Location = new System.Drawing.Point(90, 95);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(268, 36);
-            this.button11.TabIndex = 3;
-            this.button11.Text = "Отчет на стая за освобождаване на днешна дата";
+            this.button11.Size = new System.Drawing.Size(202, 34);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Държави";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(59, 73);
+            this.button5.Location = new System.Drawing.Point(89, 52);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(268, 36);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Отчет за видовете стаи в хотелска база";
+            this.button5.Size = new System.Drawing.Size(202, 34);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Клиенти";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(115, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Информация за:";
             // 
             // panel3
             // 
@@ -289,6 +325,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -304,7 +341,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
@@ -316,8 +352,12 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button buttonAddCountryAndTown;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBoxSpravki;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label5;
     }
 }

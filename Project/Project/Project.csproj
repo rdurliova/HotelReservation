@@ -93,6 +93,12 @@
     <Compile Include="Forms\FormReadCountry.Designer.cs">
       <DependentUpon>FormReadCountry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormReadRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReadRoom.Designer.cs">
+      <DependentUpon>FormReadRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormReadTown.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormReadCountry.resx">
       <DependentUpon>FormReadCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReadRoom.resx">
+      <DependentUpon>FormReadRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormReadTown.resx">
       <DependentUpon>FormReadTown.cs</DependentUpon>
