@@ -141,5 +141,24 @@ namespace Project.Forms
             FormReadRoom form = new FormReadRoom(context,read);
             form.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            textBoxSpravki.Text = button10.Text;
+            var towns = context.Towns.Where(t => t.Country.Name == "Bulgaria").OrderBy(t => t.Id).ThenBy(t => t.Name).ToList();
+          
+            foreach (var t in towns)
+            {
+                string town = string.Format($"{t.Name} ");
+                listBox1.Items.Add(town);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            FormReadTown form = new FormReadTown(context,read);
+            form.Show();
+        }
     }
 }

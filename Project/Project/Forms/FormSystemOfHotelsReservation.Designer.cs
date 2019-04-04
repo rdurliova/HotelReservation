@@ -51,7 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -139,6 +138,7 @@
             this.button12.TabIndex = 7;
             this.button12.Text = "Градове";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -224,8 +224,9 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(238, 84);
             this.button10.TabIndex = 8;
-            this.button10.Text = "Списък на стаи за освобождаване на днешна дата";
+            this.button10.Text = "Списък на градове в България";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -233,7 +234,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(238, 87);
             this.button9.TabIndex = 7;
-            this.button9.Text = "Списък на свободни стаи на днешна дата";
+            this.button9.Text = "Списък на свободни стаи ";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -297,22 +298,11 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(1029, 129);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(165, 76);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // FormSystemOfHotelsReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1282, 749);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -353,7 +343,6 @@
         private System.Windows.Forms.Button buttonAddCountryAndTown;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxSpravki;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
