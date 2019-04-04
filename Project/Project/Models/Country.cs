@@ -28,7 +28,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new ArgumentException("Town Id must be grater than 0!");
+                    throw new ArgumentException("Town Id трябва да бъде по-голямо от 0!");
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new ArgumentException("Name length must be more or equals 3 symbols!");
+                    throw new ArgumentException("Дължината на името трябва да с и повече от 3 символа!");
                 }
             }
         }
