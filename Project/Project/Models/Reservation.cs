@@ -41,7 +41,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new ArgumentException("Id must be grater than 0!");
+                    throw new ArgumentException("Id трябва да бъде по-голямо от 0");
                 }
             }
         }
@@ -57,7 +57,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new ArgumentException("Client id must be greater than 0!");
+                    throw new ArgumentException("Client id трябва да бъде по-голямо от 0!");
                 }
 
             }
@@ -75,7 +75,7 @@ namespace Project
                 else
 
               {
-                    throw new ArgumentException("Room id must be greater than 0!");
+                    throw new ArgumentException("Room id трябва да бъде по-голямо 0!");
                 }
 
             }
@@ -89,7 +89,7 @@ namespace Project
             {
                 if (value<DateTime.Now)
                 {
-                    throw new ArgumentException("DataStart can't be eralier than today ");
+                    throw new ArgumentException("Началната дата не може да бъде по-рано от днес");
                 }
                 else
                 {
@@ -106,7 +106,7 @@ namespace Project
             {
                 if (value < this.DataStart)
                 {
-                    throw new ArgumentException("Finish date cant be earlier than start date ");
+                    throw new ArgumentException("Крайната дата не може да бъде по-рано от началната");
                 }
                 else
                 {
@@ -123,7 +123,7 @@ namespace Project
             {
                 if (value<0)
                 {
-                    throw new ArgumentException("Payment can't be less than 0!");
+                    throw new ArgumentException("Плащането не може да бъде по-малко от 0!");
                 }
                 this.payment = value;
             }
@@ -142,7 +142,7 @@ namespace Project
                 }
                 else
                 {
-                    throw new AccessViolationException("Payment can't be empty");
+                    throw new AccessViolationException("PaymentType не може да бъде празно");
                 }
             }
         }
