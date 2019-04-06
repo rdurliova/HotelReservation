@@ -21,8 +21,8 @@ namespace Project.Views
         public string MenuRead()
         {
             Console.WriteLine("1 - Списък с държави");
-            Console.WriteLine("2 - ");
-            Console.WriteLine("3 - ");
+            Console.WriteLine("2 - Проверка на съществуващ град");
+            Console.WriteLine("3 - Отваряне на главното меню");
             Console.Write("Избери команда: ");
             return Console.ReadLine();
         }
